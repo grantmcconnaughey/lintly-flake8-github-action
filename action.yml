@@ -1,0 +1,11 @@
+name: Lintly-Flake8
+author: Grant McConnaughey
+description: GitHub Action which creates Pull Request reviews with linting violations.
+
+runs:
+  using: docker
+  image: Dockerfile
+
+branding:
+  icon: code
+  color: gray-dark
