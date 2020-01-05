@@ -5,8 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Testing action
     steps:
-    - name: Test action
-      id: test
-      uses: grantmcconnaughey/lintly-flake8-github-action@9224464
-      with:
-        githubAPIToken: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Test action
+        id: test
+        uses: grantmcconnaughey/lintly-flake8-github-action@9224464
+        with:
+          githubAPIToken: ${{ secrets.GITHUB_TOKEN }}
