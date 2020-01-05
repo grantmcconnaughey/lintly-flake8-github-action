@@ -2,6 +2,11 @@ name: Lintly-Flake8
 author: Grant McConnaughey
 description: GitHub Action which creates Pull Request reviews with linting violations.
 
+inputs:
+  githubAPIToken:
+    description: 'The API token to use for creating PR reviews'
+    required: true
+
 runs:
   using: docker
   image: Dockerfile
