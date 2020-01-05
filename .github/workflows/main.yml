@@ -8,3 +8,5 @@ jobs:
     - name: Test action
       id: test
       uses: grantmcconnaughey/lintly-flake8-github-action@b7c57f5
+      env:
+        LINTLY_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
