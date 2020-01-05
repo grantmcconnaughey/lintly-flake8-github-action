@@ -7,6 +7,6 @@ jobs:
     steps:
     - name: Test action
       id: test
-      uses: grantmcconnaughey/lintly-flake8-github-action@b7c57f5
-      env:
-        LINTLY_API_TOKEN: ${{ secrets.LINTLY_TOKEN }}
+      uses: grantmcconnaughey/lintly-flake8-github-action@9224464
+      with:
+        githubAPIToken: ${{ secrets.GITHUB_TOKEN }}
