@@ -7,4 +7,4 @@ jobs:
     steps:
     - name: Hello world action step
       id: hello
-      uses: grantmcconnaughey/lintly-flake8-github-action
+      uses: grantmcconnaughey/lintly-flake8-github-action@a3e02b2cd3f99e6414e25a77be60b1779eec0ad0
