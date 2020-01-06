@@ -12,4 +12,3 @@ jobs:
         uses: grantmcconnaughey/lintly-flake8-github-action@bb8548f
         with:
           githubAPIToken: ${{ secrets.GITHUB_TOKEN }}
-          failOnViolations: any
