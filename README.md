@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: grantmcconnaughey/lintly-flake8-github-action@9224464
+      - uses: grantmcconnaughey/lintly-flake8-github-action@v1.0
         with:
           # The GitHub API token to create reviews with
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -33,6 +33,6 @@ Now each PR created will be linted with Flake8. If there are any violations then
 **Note:** Lintly-Flake8 only works with the `pull_request` event. If your job runs on the `push` event then make sure the Lintly-Flake8 step only runs on the pull request event by adding `if: github.event_name == 'pull_request'`:
 
 ```yaml
-      - uses: grantmcconnaughey/lintly-flake8-github-action@9224464
+      - uses: grantmcconnaughey/lintly-flake8-github-action@v1.0
         if: github.event_name == 'pull_request'
 ```
