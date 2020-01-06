@@ -1,6 +1,6 @@
 # Lintly-Flake8 GitHub Action
 
-A GitHub Action that lints Python code with Flake8 then automatically creates pull request reviews if there are any violations.
+A GitHub Action that lints Python code with Flake8 then automatically creates pull request reviews if there are any violations. See [this pull request](https://github.com/grantmcconnaughey/lintly-flake8-github-action/pull/1#pullrequestreview-338419294) for an example.
 
 ## Usage
 
