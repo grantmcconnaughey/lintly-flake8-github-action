@@ -3,5 +3,4 @@ args="."
 if [[ $# -ne 0 ]]; then
     args="$@"
 fi
-echo "lintly ${args} --no-post-status"
-flake8 . | lintly --no-post-status --api-key $INPUT_GITHUBAPITOKEN --log
+flake8 . | lintly --api-key $INPUT_GITHUBAPITOKEN --fail-on $INPUT_FAILONVIOLATIONS --log --no-post-status
