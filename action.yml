@@ -10,6 +10,10 @@ inputs:
     description: Fail if *any* violations are detected or only *new* ones (valid values are "new" or "any")
     required: false
     default: new
+  args:
+    description: Args to pass to the flake8 executable
+    required: false
+    default: "."
 
 runs:
   using: docker
