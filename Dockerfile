@@ -1,4 +1,4 @@
-FROM jfloff/alpine-python:3.7
+FROM python:3.7-slim
 
 LABEL "com.github.actions.name"="Lintly-Flake8"
 LABEL "com.github.actions.description"="Automatic code reviewer for GitHub PRs."
