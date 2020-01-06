@@ -12,3 +12,4 @@ jobs:
         uses: grantmcconnaughey/lintly-flake8-github-action@f2dd9eb
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          args: files/file.py
