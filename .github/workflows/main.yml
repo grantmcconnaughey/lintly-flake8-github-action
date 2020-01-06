@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v1
       - name: Test action
         id: test
-        uses: grantmcconnaughey/lintly-flake8-github-action@bb8548f
+        uses: grantmcconnaughey/lintly-flake8-github-action@345c8bf
         with:
           githubAPIToken: ${{ secrets.GITHUB_TOKEN }}
           failOnViolations: any
