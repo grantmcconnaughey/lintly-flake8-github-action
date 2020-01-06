@@ -1,6 +1,8 @@
 # Lintly-Flake8 GitHub Action
 
-A GitHub Action that lints Python code with Flake8 then automatically creates pull request reviews if there are any violations. See [this pull request](https://github.com/grantmcconnaughey/lintly-flake8-github-action/pull/1#pullrequestreview-338419294) for an example.
+A GitHub Action that lints Python code with Flake8 then automatically creates pull request reviews if there are any violations. Uses [Lintly](http://github.com/grantmcconnaughey/Lintly) under the hood.
+
+See [this pull request](https://github.com/grantmcconnaughey/lintly-flake8-github-action/pull/1#pullrequestreview-338419294) for an example.
 
 ## Usage
 
@@ -19,7 +21,10 @@ jobs:
       - name: Lintly
         uses: grantmcconnaughey/lintly-flake8-github-action@9224464
         with:
-          githubAPIToken: ${{ secrets.GITHUB_TOKEN }}
+          # The GitHub API token to create reviews with
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # Fail if "new" violations detected or "any", default "new"
+          failIf: new
 ```
 
 Now each PR created will be linted with Flake8. If there are any violations then Lintly will comment on the PR using the `github-actions` bot user.
@@ -32,6 +37,4 @@ Now each PR created will be linted with Flake8. If there are any violations then
       - name: Lintly
         uses: grantmcconnaughey/lintly-flake8-github-action@9224464
         if: github.event_name == 'pull_request'
-        with:
-          githubAPIToken: ${{ secrets.GITHUB_TOKEN }}
 ```

@@ -3,10 +3,10 @@ author: Grant McConnaughey
 description: GitHub Action which creates Pull Request reviews with linting violations.
 
 inputs:
-  githubAPIToken:
-    description: The API token to use for creating PR reviews
+  token:
+    description: The GitHub API token to use for creating PR reviews
     required: true
-  failOnViolations:
+  failIf:
     description: Fail if *any* violations are detected or only *new* ones (valid values are "new" or "any")
     required: false
     default: new
