@@ -13,5 +13,7 @@ RUN pip install --upgrade pip
 RUN pip install flake8
 RUN pip install lintly
 
-ADD entrypoint.sh /entrypoint.sh
+COPY entrypoint.sh /entrypoint.sh
+COPY flake8 .config/flake8
+
 ENTRYPOINT ["/entrypoint.sh"]
