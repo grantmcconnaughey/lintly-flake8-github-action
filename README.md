@@ -28,6 +28,8 @@ jobs:
 
 Now each PR created will be linted with Flake8. If there are any violations then Lintly will comment on the PR using the `github-actions` bot user.
 
+To apply settings from a configuration file, simply edit the `flake8` file and add whichever settings you want.
+
 ![Lintly example](example.png)
 
 **Note:** Lintly-Flake8 only works with the `pull_request` event. If your job runs on the `push` event then make sure the Lintly-Flake8 step only runs on the pull request event by adding `if: github.event_name == 'pull_request'`:
