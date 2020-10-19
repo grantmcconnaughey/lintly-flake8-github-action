@@ -1,4 +1,4 @@
-FROM python:3.7-slim
+FROM python:3.9-slim
 
 LABEL "com.github.actions.name"="Lintly-Flake8"
 LABEL "com.github.actions.description"="Automatic code reviewer for GitHub PRs."
