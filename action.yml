@@ -1,5 +1,5 @@
-name: Lintly-Flake8
-author: Grant McConnaughey
+name: Lintly-Flake8-Extended
+author: Michael Völkel
 description: Lint Python projects with flake8 and create Pull Request reviews with linting violations.
 
 inputs:
@@ -10,6 +10,10 @@ inputs:
     description: Fail if *any* violations are detected or only *new* ones (valid values are "new" or "any")
     required: false
     default: new
+  requestChanges:
+    description: Post violations as change requests (true) or as comments (false)
+    required: false
+    default: true
   args:
     description: Args to pass to the flake8 executable
     required: false
