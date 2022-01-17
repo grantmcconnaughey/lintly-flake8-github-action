@@ -24,6 +24,8 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           # Fail if "new" violations detected or "any", default "new"
           failIf: new
+          # post violations as "change request" (true, default) or only comment? (false)
+          requestChanges: true
           # Additional arguments to pass to flake8, default "." (current directory)
           args: "--ignore=E121,E123 ."
 ```
