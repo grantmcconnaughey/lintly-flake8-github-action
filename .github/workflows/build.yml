@@ -1,0 +1,20 @@
+name: Test
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: [ubuntu-latest]
+    name: Testing action
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Test action
+        id: test
+        uses: MichaelVoelkel/lintly-flake8-github-action@v1.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          args: files/file.py
