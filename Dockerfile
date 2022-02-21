@@ -9,10 +9,9 @@ LABEL "repository"="https://github.com/MichaelVoelkel/lintly-flake8-github-actio
 LABEL "homepage"="https://github.com/MichaelVoelkel/lintly-flake8-github-actions"
 LABEL "maintainer"="Michael Völkel <michael.alexander.voelkel@gmail.com>"
 
-RUN pip install --upgrade pip 
-RUN pip install flake8
-RUN pip install lintly
-RUN pip install -Iv --force-reinstall MarkupSafe==2.0.1
+COPY requirements /requirements
+RUN pip install pip-tools
+RUN pip-sync requirements/requirements.txt
 
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
