@@ -10,6 +10,7 @@ LABEL "homepage"="https://github.com/grantmcconnaughey/lintly-flake8-github-acti
 LABEL "maintainer"="Grant McConnaughey <grantmcconnaughey@gmail.com>"
 
 RUN pip3 install --upgrade pip
+RUN pip3 install markupsafe==2.0.1
 RUN pip3 install flake8
 RUN pip3 install lintly
 
