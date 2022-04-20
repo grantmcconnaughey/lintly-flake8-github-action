@@ -24,6 +24,8 @@ jobs:
           failIf: new
           # Additional arguments to pass to flake8, default "." (current directory)
           args: "--ignore=E121,E123 ."
+          # Additional arguments to pass to lintly, default empty.
+          lintlyargs: "--no-request-changes"
 ```
 
 Now each PR created will be linted with Flake8. If there are any violations then Lintly will comment on the PR using the `github-actions` bot user.
